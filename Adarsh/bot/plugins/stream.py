@@ -154,7 +154,7 @@ async def channel_receive_handler(bot, broadcast):
   
         return 
     try: 
-        log_msg = await m.forward(chat_id=Var.BIN_CHANNEL) 
+        log_msg = await broadcast.forward(chat_id=Var.BIN_CHANNEL) 
         stream_links = f"{Var.URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}" 
         online_links = f"{Var.URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}" 
         stream_link = get_shortlink(stream_links) 
