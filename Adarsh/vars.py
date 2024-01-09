@@ -11,7 +11,7 @@ class Var(object):
     MULTI_CLIENT = False
     API_ID = int(getenv('API_ID', '27116256'))
     API_HASH = str(getenv('API_HASH', '89669f3ecf7d5257926a50701371100b'))
-    BOT_TOKEN = str(getenv('BOT_TOKEN', '6327998819:AAH0aaiuU0C9729mKDczT7OLDsq2IxwUsqM'))
+    BOT_TOKEN = str(getenv('BOT_TOKEN', '6327998819:AAFQq45agnk8i4W8qgmLIYsSJ0xeldvTBTM'))
     name = str(getenv('name', 'Fast_Downloader_bot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
@@ -38,6 +38,6 @@ class Var(object):
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://Anshu01:Anshu01@cluster0.vhtlpsp.mongodb.net/?retryWrites=true&w=majority'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'newmoviesot'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split()))      
-    SHORTLINK_URL = getenv('SHORTLINK_URL', 'api.shareus.io')
+    SHORTLINK_URL = getenv('SHORTLINK_URL', 'api.shareus.in')
     SHORTLINK_API = getenv('SHORTLINK_API', 'gK5Lz5Wa8AaEMON3sxF1fr5H8l03')
     TUTORIAL_URL = getenv('TUTORIAL_URL', 'https://t.me/rk_back_up/18')
