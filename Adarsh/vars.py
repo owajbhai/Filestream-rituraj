@@ -38,6 +38,6 @@ class Var(object):
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://Marvelbotz:Marvelbotz@cluster0.oyxdumi.mongodb.net/?retryWrites=true&w=majority'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'newmoviesot'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
-    SHORTLINK_URL = getenv('SHORTLINK_URL', 'onepagelink.in')
-    SHORTLINK_API = getenv('SHORTLINK_API', '6b008bca8d172da3eac6261ad32929296d227e49')
+    SHORTLINK_URL = getenv('SHORTLINK_URL', 'omnifly.in.net')
+    SHORTLINK_API = getenv('SHORTLINK_API', 'ebf0343ceb600a2596e2b9b4a3a2dabf0e097f1b')
     TUTORIAL_URL = getenv('TUTORIAL_URL', 'https://t.me/marvelsbackups/148')
