@@ -30,7 +30,7 @@ def generate_random_alphanumeric():
     return random_chars 
   
 def get_shortlink(url): 
-    rget = requests.get(f"https://api.shareus.io/easy_api?key=gK5Lz5Wa8AaEMON3sxF1fr5H8l03&url={url}&alias={generate_random_alphanumeric()}") 
+    rget = requests.get(f"https://api.shareus.io/easy_api?key=gK5Lz5Wa8AaEMON3sxF1fr5H8l03&link=https://shareus.io") 
     rjson = rget.json() 
     if rjson["status"] == "success" or rget.status_code == 200: 
         return rjson["shortenedUrl"] 
