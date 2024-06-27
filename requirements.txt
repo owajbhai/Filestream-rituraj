@@ -6,6 +6,6 @@ motor
 aiofiles 
 dnspython 
 apscheduler 
-requests 
+request=request 
 psutil 
 pyromod
