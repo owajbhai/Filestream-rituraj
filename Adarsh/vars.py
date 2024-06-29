@@ -38,6 +38,6 @@ class Var(object):
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://Anshu01:Anshu01@cluster0.vhtlpsp.mongodb.net/?retryWrites=true&w=majority'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'newmoviesot'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split()))      
-    SHORTLINK_URL = getenv('SHORTLINK_URL', 'ziplinker.net')
-    SHORTLINK_API = getenv('SHORTLINK_API', '086b87a6186093235e4d170fde204d583e3ce4be')
+    SHORTLINK_URL = getenv('SHORTLINK_URL', 'zxlink.in')
+    SHORTLINK_API = getenv('SHORTLINK_API', '717ed05741f661fdfe72eeafee077496ca23f3e9')
     TUTORIAL_URL = getenv('TUTORIAL_URL', 'https://t.me/rk_back_up/18')
