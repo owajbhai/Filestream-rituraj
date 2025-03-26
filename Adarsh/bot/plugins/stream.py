@@ -19,7 +19,31 @@ MY_PASS = os.environ.get("MY_PASS", None)
 pass_dict = {}
 pass_db = Database(Var.DATABASE_URL, "ag_passwords")
 
+last_ad_time = {}  # Dictionary to store last ad message timestamp per user
 
+def should_send_ad(user_id):
+    """ Check if 12 hours have passed since the last ad message for this user. """
+    current_time = time.time()
+    if user_id not in last_ad_time or (current_time - last_ad_time[user_id]) >= 43200:  # 12 hours = 43200 seconds
+        last_ad_time[user_id] = current_time
+        return True
+    return False
+
+current_ad = "🔥 Get premium movies today!"  # Default Ad Message
+
+@StreamBot.on_message(filters.command("setad") & filters.user(Var.OWNER_ID))
+async def set_ad(c: Client, m: Message):
+    global current_ad
+    if len(m.text.split()) < 2:
+        await m.reply_text("⚠ **Usage:** `/setad Your New Ad Message Here`")
+        return
+    new_ad = m.text.split("/setad ", maxsplit=1)[-1]
+    current_ad = new_ad
+    await m.reply_text(f"✅ **Ad Updated Successfully:**\n{current_ad}")
+
+def get_ad_message():
+    return current_ad
+    
 @StreamBot.on_message((filters.regex("login🔑") | filters.command("login")) , group=4)
 async def login_handler(c: Client, m: Message):
     try:
@@ -108,6 +132,15 @@ async def private_receive_handler(c: Client, m: Message):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("STREAM 🖥", url=stream_link), #Stream Link
                                                 InlineKeyboardButton('DOWNLOAD 📥', url=online_link)]]) #Download Link
+        )
+
+    # Send Ad Message (only if 12 hours passed for this user)
+    if should_send_ad(m.from_user.id):
+        await asyncio.sleep(0.1)
+        await m.reply_text(
+            text=f"📢 **Sponsored Message:**\n{get_ad_message()}",
+            disable_web_page_preview=True,
+            quote=True
         )
     except FloodWait as e:
         print(f"Sleeping for {str(e.x)}s")
