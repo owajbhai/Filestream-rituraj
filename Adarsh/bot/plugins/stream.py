@@ -113,11 +113,11 @@ async def private_receive_handler(c: Client, m: Message):
         # Normal Message (Har Baar Stream Link Ke Baad Jayega)
         await asyncio.sleep(0.1)
         await m.reply_text(
-    text="📢 **Exclusive Offer:** Get latest movies & web series now! 🎬🔥",
+    text="📢 **Exclusive Offer:** Get latest movies & Animation Video Service! 🎬🔥",
     quote=True,
     disable_web_page_preview=True,
     reply_markup=InlineKeyboardMarkup([
-        [InlineKeyboardButton("🔗 Visit Now", url="https://m.indiamart.com/impcat/dvd-accessories.html?utm_source=sumit_u.v&utm_medium=affiliate&utm_campaign=0325&utm_content=57")]
+        [InlineKeyboardButton("🔗 Visit Now", url="https://m.indiamart.com/impcat/animation-services.html?utm_source=sumit_u.v&utm_medium=affiliate&utm_campaign=0325&utm_content=58")]
     ])
 )
     except FloodWait as e:
