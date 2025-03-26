@@ -108,7 +108,18 @@ async def private_receive_handler(c: Client, m: Message):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("STREAM 🖥", url=stream_link), #Stream Link
                                                 InlineKeyboardButton('DOWNLOAD 📥', url=online_link)]]) #Download Link
+        
         )
+        # Normal Message (Har Baar Stream Link Ke Baad Jayega)
+        await asyncio.sleep(0.1)
+        await m.reply_text(
+    text="📢 **Exclusive Offer:** Get latest movies & web series now! 🎬🔥",
+    quote=True,
+    disable_web_page_preview=True,
+    reply_markup=InlineKeyboardMarkup([
+        [InlineKeyboardButton("🔗 Visit Now", url="https://m.indiamart.com/impcat/dvd-accessories.html?utm_source=sumit_u.v&utm_medium=affiliate&utm_campaign=0325&utm_content=57")]
+    ])
+)
     except FloodWait as e:
         print(f"Sleeping for {str(e.x)}s")
         await asyncio.sleep(e.x)
