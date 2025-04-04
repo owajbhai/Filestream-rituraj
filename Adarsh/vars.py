@@ -29,12 +29,12 @@ class Var(object):
     
     else:
         ON_HEROKU = False
-    FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
+    FQDN = str(getenv('FQDN', 'increasing-orsola-marvelbotz-781f228d.koyeb.app')) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
     HAS_SSL=bool(getenv('HAS_SSL',False))
     if HAS_SSL:
-        URL = "https://{}/".format(FQDN)
+        URL = "http://increasing-orsola-marvelbotz-781f228d.koyeb.app/".format(FQDN)
     else:
-        URL = "http://{}/".format(FQDN)
+        URL = "http://increasing-orsola-marvelbotz-781f228d.koyeb.app/".format(FQDN)
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://Marvelbotz:Marvelbotz@cluster0.oyxdumi.mongodb.net/?retryWrites=true&w=majority'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'marvelsbackup'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
