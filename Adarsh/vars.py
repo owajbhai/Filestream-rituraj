@@ -3,8 +3,6 @@ import os
 from os import getenv, environ
 from dotenv import load_dotenv
 
-
-
 load_dotenv()
 
 class Var(object):
@@ -23,21 +21,24 @@ class Var(object):
     NO_PORT = bool(getenv('NO_PORT', False))
     APP_NAME = None
     OWNER_USERNAME = str(getenv('OWNER_USERNAME', 'Sivam_uv'))
+
     if 'DYNO' in environ:
         ON_HEROKU = True
         APP_NAME = str(getenv('APP_NAME'))
-    
     else:
         ON_HEROKU = False
-    FQDN = str(getenv('FQDN', 'increasing-orsola-marvelbotz-781f228d.koyeb.app')) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-    HAS_SSL=bool(getenv('HAS_SSL',False))
+
+    FQDN = str(getenv('FQDN', 'increasing-orsola-marvelbotz-781f228d.koyeb.app')) if not ON_HEROKU or getenv('FQDN') else APP_NAME + '.herokuapp.com'
+    HAS_SSL = bool(getenv('HAS_SSL', False))
+
     if HAS_SSL:
         URL = "http://increasing-orsola-marvelbotz-781f228d.koyeb.app/".format(FQDN)
     else:
         URL = "http://increasing-orsola-marvelbotz-781f228d.koyeb.app/".format(FQDN)
+
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://Marvelbotz:Marvelbotz@cluster0.oyxdumi.mongodb.net/?retryWrites=true&w=majority'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'marvelsbackup'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
-     SHORTLINK_URL = getenv('SHORTLINK_URL', 'shareus.io')
+    SHORTLINK_URL = getenv('SHORTLINK_URL', 'shareus.io')
     SHORTLINK_API = getenv('SHORTLINK_API', 'gK5Lz5Wa8AaEMON3sxF1fr5H8l03')
     TUTORIAL_URL = getenv('TUTORIAL_URL', 'https://t.me/marvelsbackup/3')
