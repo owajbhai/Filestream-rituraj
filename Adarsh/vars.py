@@ -39,6 +39,6 @@ class Var(object):
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://Marvelbotz:Marvelbotz@cluster0.oyxdumi.mongodb.net/?retryWrites=true&w=majority'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'marvelsbackup'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001362659779")).split())) 
-    SHORTLINK_URL = getenv('SHORTLINK_URL', 'api.shareus.io')
-    SHORTLINK_API = getenv('SHORTLINK_API', 'gK5Lz5Wa8AaEMON3sxF1fr5H8l03')
+    SHORTLINK_URL = getenv('SHORTLINK_URL', 'linkcents.com')
+    SHORTLINK_API = getenv('SHORTLINK_API', '84a3e44eb56e270b5f8eb969e1f13d8098b2a60d')
     TUTORIAL_URL = getenv('TUTORIAL_URL', 'https://t.me/marvelsbackup/3')
