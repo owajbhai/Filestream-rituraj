@@ -28,7 +28,7 @@ class Var(object):
     else:
         ON_HEROKU = False
 
-    FQDN = str(getenv('FQDN', 'advancestreambot-11kq.onrender.com')) if not ON_HEROKU or getenv('FQDN') else APP_NAME + '.herokuapp.com'
+    FQDN = str(getenv('FQDN', 'https://resonant-rosie-bhaiforik76-6c00d401.koyeb.app/')) if not ON_HEROKU or getenv('FQDN') else APP_NAME + '.herokuapp.com'
     HAS_SSL = bool(getenv('HAS_SSL', False))
 
     if HAS_SSL:
