@@ -32,9 +32,9 @@ class Var(object):
     HAS_SSL = bool(getenv('HAS_SSL', False))
 
     if HAS_SSL:
-        URL = "https://advancestreambot-11kq.onrender.com/".format(FQDN)
+        URL = "https://resonant-rosie-bhaiforik76-6c00d401.koyeb.app/".format(FQDN)
     else:
-        URL = "https://advancestreambot-11kq.onrender.com/".format(FQDN)
+        URL = "https://resonant-rosie-bhaiforik76-6c00d401.koyeb.app/".format(FQDN)
 
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://georgarevenio:8Gh0DpkI4K3RkVPA@cluster0.gyezl2s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'ClipMateBhai'))
