@@ -41,4 +41,4 @@ class Var(object):
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1002245217353")).split())) 
     SHORTLINK_URL = getenv('SHORTLINK_URL', 'arolinks.com')
     SHORTLINK_API = getenv('SHORTLINK_API', 'd6a2a1bae0a25c4aa2d4d3c3ad364d6306995a37')
-    TUTORIAL_URL = getenv('TUTORIAL_URL', 'https://t.me/+IyGqymZL_qtkMTk1')
+    TUTORIAL_URL = getenv('TUTORIAL_URL', 'https://t.me/ClipMateBhai/1945')
