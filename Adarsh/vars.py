@@ -9,8 +9,8 @@ class Var(object):
     MULTI_CLIENT = False
     API_ID = int(getenv('API_ID', '23621595'))
     API_HASH = str(getenv('API_HASH', 'de904be2b4cd4efe2ea728ded17ca77d'))
-    BOT_TOKEN = str(getenv('BOT_TOKEN', '6620784685:AAGLKiPLBWNlnBBEwcOSL-SZV-TEl1g_0yQ'))
-    name = str(getenv('name', 'filetolinkbot'))
+    BOT_TOKEN = str(getenv('BOT_TOKEN', ''))
+    name = str(getenv('name', 'movieLover1_Bot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '4'))
     BIN_CHANNEL = int(getenv('BIN_CHANNEL', '-1002245217353'))
