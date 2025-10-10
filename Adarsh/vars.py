@@ -39,6 +39,6 @@ class Var(object):
     DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://georgarevenio:8Gh0DpkI4K3RkVPA@cluster0.gyezl2s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'ClipMateBhai'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1002277284028")).split())) 
-    SHORTLINK_URL = getenv('SHORTLINK_URL', 'arolinks.com')
-    SHORTLINK_API = getenv('SHORTLINK_API', 'd6a2a1bae0a25c4aa2d4d3c3ad364d6306995a37')
+    SHORTLINK_URL = getenv('SHORTLINK_URL', 'onylinks.com')
+    SHORTLINK_API = getenv('SHORTLINK_API', 'e0b993ab824859c3375b05a636c32f5b61d528d2')
     TUTORIAL_URL = getenv('TUTORIAL_URL', 'https://t.me/ClipMateBhai/1945')
